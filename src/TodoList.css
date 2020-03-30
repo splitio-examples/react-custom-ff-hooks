@@ -10,16 +10,13 @@
     font-size: 16px;
     margin: 10px;
     margin-right: 0px;
-    background-color: #0066FF;
-    color: #FFF;
-    border: 2px solid #0066FF;
+    background-color: #0470CA;
 }
 
-    .todoListMain .header button:hover {
-        background-color: #003399;
-        border: 2px solid #003399;
-        cursor: pointer;
-    }
+.todoListMain .header button.button_new {
+    background-color: green;
+}
+
 
 .todoListMain .theList {
     list-style: none;
