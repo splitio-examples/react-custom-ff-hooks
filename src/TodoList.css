@@ -10,6 +10,9 @@
     font-size: 16px;
     margin: 10px;
     margin-right: 0px;
+}
+
+.todoListMain .header button.button_default {
     background-color: #0470CA;
 }
 
