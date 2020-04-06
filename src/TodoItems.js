@@ -1,5 +1,4 @@
 ﻿import React, { Component } from "react";
-import FlipMove from "react-flip-move";
 
 class TodoItems extends Component {
 
@@ -14,8 +13,11 @@ class TodoItems extends Component {
     }
 
     createTasks(item) {
-        return <li onClick={() => this.delete(item.key)}
-            key={item.key}>{item.text}</li>
+        // conditionally rendering where we only render the delete buttpn if the allow delete button is set to true
+        return <li
+            key={item.key}>{item.text}
+            {this.props.allowDelete && <button onClick={() => this.delete(item.key)}>x</button>}
+            </li>
     }
 
     render() {
@@ -24,9 +26,7 @@ class TodoItems extends Component {
 
         return (
             <ul className="theList">
-                <FlipMove duration={250} easing="ease-out">
-                    {listItems}
-                </FlipMove>
+                {listItems}
             </ul>
         );
     }

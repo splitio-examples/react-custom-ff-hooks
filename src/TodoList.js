@@ -60,13 +60,8 @@ class TodoList extends Component {
         );
     }
 
-    // As a better convention, I modularized the code
-    renderContent(treatment) {
-        // Variable that differentiates between treatment on and off
-        // If treatment is on, we are setting buttonClass to 'button_new'
-        // If treatment is off, we are setting buttonClass to 'button_default'
-        const buttonClass = treatment.treatment === 'on' ? 'button_new' : 'button_default';
-
+    renderContent(props) {
+        const allowDelete = props.treatment === 'on';
         return (
             <div className="todoListMain">
                 <div className="header">
@@ -74,11 +69,10 @@ class TodoList extends Component {
                         <input ref={(a) => this._inputElement = a}
                             placeholder="Enter Task">
                         </input>
-                        {/* Adds the correct class name to the button */}
-                        <button className={buttonClass} type="submit">Add</button> 
+                        <button type="submit">Add</button> 
                     </form>
                 </div>
-                <TodoItems entries={this.state.items}
+                <TodoItems entries={this.state.items} allowDelete={allowDelete}
                     delete={this.deleteItem} />
             </div>
             )
@@ -91,9 +85,8 @@ class TodoList extends Component {
 const sdkConfig = {
     core: {
         authorizationKey: 's2959s3memm2hp1b03u34khu1sjl0106j6qr',
-        key: 'talia.nassi@split.io'
+        key: 'test@split.io'
     },
-    // Makes the console display all info
     debug: true
 };
 
