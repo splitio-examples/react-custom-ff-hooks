@@ -90,5 +90,4 @@ const sdkConfig = {
     debug: true
 };
 
-// The SplitFactor Component uses the config above
 export default withSplitFactory(sdkConfig)(TodoList);
