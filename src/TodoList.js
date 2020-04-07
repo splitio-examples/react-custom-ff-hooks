@@ -60,8 +60,8 @@ class TodoList extends Component {
         );
     }
 
-    renderContent(props) {
-        const allowDelete = props.treatment === 'on';
+    renderContent(deleteTreatment) {
+        const allowDelete = deleteTreatment.treatment === 'on';
         return (
             <div className="todoListMain">
                 <div className="header">
@@ -85,7 +85,7 @@ class TodoList extends Component {
 const sdkConfig = {
     core: {
         authorizationKey: 's2959s3memm2hp1b03u34khu1sjl0106j6qr',
-        key: 'test@split.io'
+        key: 'talia.nassi@split.io'
     },
     debug: true
 };
