@@ -11,15 +11,22 @@
   </a>
 </p>
 
-> This todolist shows how to add feature flags easily with react. I want to add the ability to control whether the current user can delete tasks. I want to roll this functionality out in a controlled way, using feature flags.
+> This example shows how to add feature flags easily to my todolist app with react. I want to add the ability to control whether the current user can delete tasks. I want to roll this functionality out in a controlled way, using feature flags.
 
-### ✨ [Blog](https://www.split.io/blog/react-feature-flags-10-minutes/)
+### ✨ [Read more in our blog](https://www.split.io/blog/react-feature-flags-10-minutes/)
 
-### Prerequisites
+## Prerequisites
 
 * [Node installed](https://nodejs.org/en/)
 * [A Split Account](https://www.split.io/signup/)
 > Split.io is a feature flagging and experimentation platform. Split makes it easy for developers to set up feature flags, perform controlled rollouts with canary releases, and measure the outcomes with detailed analytics.
+
+## Getting Started
+To install this example application, run the following commands:
+
+git clone https://github.com/talianassi921/todolist.git <br />
+cd todolist <br />
+npm install <br />
 
 ## Usage
 
