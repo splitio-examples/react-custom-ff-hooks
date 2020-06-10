@@ -6,8 +6,8 @@
   <a href="https://help.split.io/hc/en-us/articles/360020448791-JavaScript-SDK" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
-  <a href="https://twitter.com/talia\_nassi" target="_blank">
-    <img alt="Twitter: talia\_nassi" src="https://img.shields.io/twitter/follow/talia\_nassi.svg?style=social" />
+  <a href="https://twitter.com/talia_nassi" target="_blank">
+    <img alt="Twitter: talia\_nassi" src="https://img.shields.io/twitter/follow/talia_nassi.svg?style=social" />
   </a>
 </p>
 
