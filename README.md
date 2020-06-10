@@ -24,9 +24,9 @@
 ## Getting Started
 To install this example application, run the following commands:
 
-```git clone https://github.com/talianassi921/todolist.git```
-```cd todolist```
-```npm install```
+git clone https://github.com/talianassi921/todolist.git
+cd todolist
+npm install
 
 ## Usage
 
