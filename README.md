@@ -7,13 +7,13 @@
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
   <a href="https://twitter.com/talia_nassi" target="_blank">
-    <img alt="Twitter: talia\_nassi" src="https://img.shields.io/twitter/follow/talia_nassi.svg?style=social" />
+    <img alt="Twitter: talia_nassi" src="https://img.shields.io/twitter/follow/talia_nassi.svg?style=social" />
   </a>
 </p>
 
 This example shows how to add feature flags easily to my todolist app with react. I want to add the ability to control whether the current user can delete tasks. I want to roll this functionality out in a controlled way, using feature flags.
 
-### ✨ [Read more in our blog](https://www.split.io/blog/react-feature-flags-10-minutes/)
+### ✨ [Read more on our blog](https://www.split.io/blog/react-feature-flags-10-minutes/)
 
 ## Prerequisites
 
