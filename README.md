@@ -11,7 +11,7 @@
   </a>
 </p>
 
-> This example shows how to add feature flags easily to my todolist app with react. I want to add the ability to control whether the current user can delete tasks. I want to roll this functionality out in a controlled way, using feature flags.
+This example shows how to add feature flags easily to my todolist app with react. I want to add the ability to control whether the current user can delete tasks. I want to roll this functionality out in a controlled way, using feature flags.
 
 ### ✨ [Read more in our blog](https://www.split.io/blog/react-feature-flags-10-minutes/)
 
