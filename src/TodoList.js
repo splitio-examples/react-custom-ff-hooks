@@ -1,7 +1,7 @@
 ﻿import React, { Component } from "react";
-import { withSplitFactory } from "@splitsoftware/splitio-react"
 import TodoItems from "./TodoItems";
 import "./TodoList.css";
+import withSplit from './withSplit';
 
 class TodoList extends Component {
     constructor(props) {
@@ -62,15 +62,4 @@ class TodoList extends Component {
     }
 }
 
-// The config that I use to configure my split instance
-// This initializes the Split Factory, which is the entry point of the library
-// From Syntax in UI
-const sdkConfig = {
-    core: {
-        authorizationKey: process.env.REACT_APP_SPLIT_API_KEY,
-        key: 'dev'
-    },
-    debug: true
-};
-
-export default withSplitFactory(sdkConfig)(TodoList);
+export default withSplit(TodoList);

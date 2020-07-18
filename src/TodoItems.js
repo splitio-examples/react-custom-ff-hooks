@@ -1,12 +1,10 @@
-﻿import { useClient } from "@splitsoftware/splitio-react"
-import React from "react";
+﻿import React from "react";
+import useTreatment from "./useTreatment";
 
 const DELETE_TREATMENT='talia_todolist_delete';
 
 export default function TodoItems({deleteItem,entries}){
-  const client = useClient();
-  const deleteTreatment = client.getTreatment(DELETE_TREATMENT);
-  const allowDelete = deleteTreatment === 'on';
+  const allowDelete = useTreatment(DELETE_TREATMENT) === 'on';
 
   const listItems = entries.map( (item) => {
     return <li key={item.key} className={allowDelete?"-deletable":null}>{item.text}
@@ -20,3 +18,4 @@ export default function TodoItems({deleteItem,entries}){
     </ul>
   );
 }
+
