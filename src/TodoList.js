@@ -1,5 +1,5 @@
 ﻿import React, { Component } from "react";
-import { SplitTreatments, withSplitFactory } from "@splitsoftware/splitio-react"
+import { withSplitFactory } from "@splitsoftware/splitio-react"
 import TodoItems from "./TodoItems";
 import "./TodoList.css";
 
@@ -45,23 +45,7 @@ class TodoList extends Component {
         });
     }
 
-    //React render function to render the todo list
     render() {
-        return (
-            //Split Treatments is a React component that performs feature evalutation
-            //Does a call to client.getTreatmentswithConfig(names)
-            //You pass in the name of the feature flag
-            //This returns a treatment and a config
-            <SplitTreatments names={['talia_todolist_delete']} >
-                {({ treatments }) => {
-                    return this.renderContent(treatments['talia_todolist_delete']) 
-                }}
-            </SplitTreatments>
-        );
-    }
-
-    renderContent(deleteTreatment) {
-        const allowDelete = deleteTreatment.treatment === 'on';
         return (
             <div className="todoListMain">
                 <div className="header">
@@ -72,8 +56,7 @@ class TodoList extends Component {
                         <button type="submit">Add</button> 
                     </form>
                 </div>
-                <TodoItems entries={this.state.items} allowDelete={allowDelete}
-                    delete={this.deleteItem} />
+                <TodoItems entries={this.state.items} deleteItem={this.deleteItem} />
             </div>
             )
     }
@@ -84,8 +67,8 @@ class TodoList extends Component {
 // From Syntax in UI
 const sdkConfig = {
     core: {
-        authorizationKey: 's2959s3memm2hp1b03u34khu1sjl0106j6qr',
-        key: 'talia.nassi@split.io'
+        authorizationKey: process.env.REACT_APP_SPLIT_API_KEY,
+        key: 'dev'
     },
     debug: true
 };

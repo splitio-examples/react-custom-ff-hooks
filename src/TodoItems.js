@@ -1,35 +1,22 @@
-﻿import React, { Component } from "react";
+﻿import { useClient } from "@splitsoftware/splitio-react"
+import React from "react";
 
-class TodoItems extends Component {
+const DELETE_TREATMENT='talia_todolist_delete';
 
-    constructor(props) {
-        super(props);
+export default function TodoItems({deleteItem,entries}){
+  const client = useClient();
+  const deleteTreatment = client.getTreatment(DELETE_TREATMENT);
+  const allowDelete = deleteTreatment === 'on';
 
-        this.createTasks = this.createTasks.bind(this);
-    }
+  const listItems = entries.map( (item) => {
+    return <li key={item.key} className={allowDelete?"-deletable":null}>{item.text}
+      {allowDelete && <button onClick={() => deleteItem(item.key)}>x</button>}
+    </li>
+  });
 
-    delete(key) {
-        this.props.delete(key);
-    }
-
-    createTasks(item) {
-        // conditionally rendering where we only render the delete buttpn if the allow delete button is set to true
-        return <li
-            key={item.key}>{item.text}
-            {this.props.allowDelete && <button onClick={() => this.delete(item.key)}>x</button>}
-            </li>
-    }
-
-    render() {
-        var todoEntries = this.props.entries;
-        var listItems = todoEntries.map(this.createTasks);
-
-        return (
-            <ul className="theList">
-                {listItems}
-            </ul>
-        );
-    }
-};
-
-export default TodoItems;
+  return (
+      <ul className="theList">
+      {listItems}
+    </ul>
+  );
+}
