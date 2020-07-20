@@ -30,9 +30,6 @@
         margin: 0px;
         display: list-item;
     }
-    .todoListMain .theList li.-deletable {
-        background-color: #f44;
-    }
 
         .todoListMain .theList li:hover button {
             display: inherit;

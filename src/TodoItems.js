@@ -7,7 +7,7 @@ export default function TodoItems({deleteItem,entries}){
   const allowDelete = useTreatment(DELETE_TREATMENT) === 'on';
 
   const listItems = entries.map( (item) => {
-    return <li key={item.key} className={allowDelete?"-deletable":null}>{item.text}
+    return <li key={item.key}>{item.text}
       {allowDelete && <button onClick={() => deleteItem(item.key)}>x</button>}
     </li>
   });
